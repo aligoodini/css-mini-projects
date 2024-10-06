@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.tb-tongue {
+  transform: translateY(-2px) rotateX(90deg);
+  transform-origin: center 68%;
+  transition: all 1s;
+}
+svg:hover .tb-tongue {
+  transform: rotateX(0deg);
+}
