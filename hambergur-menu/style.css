@@ -1,0 +1,65 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+label {
+  display: inline-block;
+  background-color: rgb(211, 211, 211);
+  width: 70px;
+  height: 70px;
+  border: 2px solid darkgrey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+div {
+  position: relative;
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 33px;
+  margin-left: 10px;
+  transition: all .5s;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+}
+div::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+input:checked ~ label div {
+  transform: rotate(45deg);
+}
+
+input:checked ~ label div::after {
+  transform: translateY(15px) rotate(-90deg);
+
+}
+
+input:checked ~ label div::before {
+  opacity: 0;
+}
+
+input {
+  opacity: 0;
+}
