@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.cloud {
+  position: relative;
+  animation: cloudAnim 5s alternate infinite;
+}
+
+@keyframes cloudAnim {
+    0%{
+        transform: translateX(-150px) skew(20deg);
+    }
+
+    100%{
+        transform: translateX(150px) skew(-20deg);
+    }
+}
+.cloud::before {
+  content: "\2601";
+  color: lightblue;
+  font-size: 250px;
+}
+.rain {
+    z-index: -1;
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  top: 180px;
+  left: var(--left);
+  animation: drop 1s infinite;
+  animation-duration: calc(20s / var(--dely));
+}
+
+@keyframes drop {
+  0% {
+    top: 180px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 400px;
+    opacity: 0;
+  }
+}
