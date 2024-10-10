@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: blue;
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    position: relative;
+    transition: all .2s;
+}
+.bubble{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.493);
+    border-radius: 50%;
+    bottom: -20px;
+    right: -20px;
+    transition: all .2s;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    border: 2px solid blue;
+}
+.container:hover > .bubble{
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    bottom: 30px;
+    right: 15px;
+    transform: rotate(180deg);
+}
+.container:hover{
+    transform: scale(1.2);
+}
+p{
+    z-index: 10;
+}

@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  background-color: black;
+}
+.container {
+  display: flex;
+  margin-top: 100px;
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 350px;
+}
+
+.ball {
+  margin: 0 70px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to right, blue, red);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: upDown 1s infinite alternate;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(70px);
+    height: 30px;
+  }
+
+  100% {
+    transform: translateY(-350px);
+    height: 100px;
+  }
+}
+
+.ball-shadow {
+  animation: shadowShow 1s alternate infinite;
+  position: absolute;
+  left: 65px;
+  top: 70px;
+  width: 70px;
+  height: 40px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.356),
+    rgba(255, 0, 0, 0.256)
+  );
+  filter: blur(4px);
+  /* margin-top: 300px;
+  margin-right: 170px; */
+  border-radius: 50%;
+}
+
+@keyframes shadowShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.ball-1 {
+  animation-delay: 0s;
+}
+.ball-2 {
+  animation-delay: 0.5s;
+}
+.ball-3 {
+  animation-delay: 1s;
+}
+
+.shadow-1 {
+  animation-delay: 0.3s;
+}
+.shadow-2 {
+  animation-delay: 0.8s;
+}
+.shadow-3 {
+  animation-delay: 1.3s;
+}
