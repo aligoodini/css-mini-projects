@@ -1,0 +1,43 @@
+body{
+    display: flex;justify-content: center;
+    align-items: center;
+    min-height: 100vh
+}
+.container{
+    position: relative;
+}
+
+input{
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+input:hover ~ .tag , input:focus ~ .tag {
+    display: inline-block;
+}   
+
+input:hover::placeholder , input:focus::placeholder {
+    opacity: 0;
+}
+
+input:hover,
+input:focus{
+    border: 2px solid purple;
+    transform: scale(1.2);
+}
+
+.tag{
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+    display: none;
+    transition: all .5s;
+}

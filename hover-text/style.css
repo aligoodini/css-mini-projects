@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-box {
+  width: 300px;
+  height: 100px;
+  /* background-color: gray; */
+  border-radius: 20px;
+  border: 5px double rgb(61, 56, 56);
+  margin: 25px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.main-box:hover {
+  background-color: rgb(191, 0, 255);
+  border-color: white;
+  color: white;
+}
+
+.main-box:hover ~ .tooltip{
+    transform: translateY(-150px);
+    opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  background-color: gray;
+  width: 180px;
+  height: 75px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  transition: all .3s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.tooltip::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    position: absolute;
+    transform: rotate(45deg) translate(25px ,20px);
+}

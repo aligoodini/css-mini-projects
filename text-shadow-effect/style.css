@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: black; */
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  font-size: 50px;
+  font-family: cursive;
+  color: transparent;
+  margin-right: 50px;
+  animation: shadowText 1.5s infinite alternate;
+  -webkit-text-stroke: 1px blue;
+}
+
+@keyframes shadowText {
+  0% {
+    color: white;
+  }
+  100% {
+    color: blue;
+    filter: drop-shadow(0 0 20px rgb(32, 76, 237));
+  }
+}
+
+.border {
+  background-color: gray;
+  width: 10px;
+  height: 70px;
+  border-radius: 20px;
+  transform: skew(-20deg);
+  animation: wink 1.5s infinite alternate;
+}
+
+@keyframes wink {
+  0% {
+    transform: skew(-20deg);
+    background-color: gray;
+  }
+
+  100% {
+    transform: translateX(-350px) skew(20deg);
+    background-color: blue;
+  }
+}
